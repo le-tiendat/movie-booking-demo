@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking Demo - DBMS Locking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Movie Booking Demo</h1>
+        <p class="subtitle">Minh họa Concurrency Control & Locking trong DBMS</p>
+
+        <div class="controls">
+            <button id="resetBtn" class="secondary-btn">🔄 Reset Tất cả Ghế</button>
+            <div class="mode-selector">
+                <label>
+                    <input type="radio" name="mode" value="unsafe" checked> Chế độ KHÔNG AN TOÀN (Dễ lỗi)
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="safe"> Chế độ AN TOÀN (DBMS Locking)
+                </label>
+            </div>
+        </div>
+
+        <div class="booking-area">
+            <!-- Giả lập 2 User -->
+            <div class="user-panel" id="user1">
+                <h3>👤 Người dùng A</h3>
+                <div class="cinema-map" id="map1"></div>
+            </div>
+
+            <div class="user-panel" id="user2">
+                <h3>👤 Người dùng B</h3>
+                <div class="cinema-map" id="map2"></div>
+            </div>
+        </div>
+
+        <div id="log" class="log-area">
+            <p>Hệ thống sẵn sàng. Vui lòng bấm mua ghế đồng thời ở cả 2 bên để kiểm tra.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

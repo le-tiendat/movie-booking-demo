@@ -1,0 +1,116 @@
+:root {
+    --primary: #e50914;
+    --booked: #444;
+    --available: #0080ff;
+    --bg: #141414;
+    --text: #fff;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 { color: var(--primary); margin-bottom: 5px; }
+.subtitle { color: #888; margin-bottom: 30px; }
+
+.controls {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.mode-selector {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.booking-area {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.user-panel {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    border: 1px solid #333;
+}
+
+.cinema-map {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.seat {
+    width: 60px;
+    height: 50px;
+    background: var(--available);
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.seat.booked {
+    background: var(--booked);
+    cursor: not-allowed;
+}
+
+.seat:hover:not(.booked) {
+    background: #00bfff;
+    transform: scale(1.1);
+}
+
+.log-area {
+    margin-top: 30px;
+    background: #000;
+    color: #0f0;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+    height: 150px;
+    overflow-y: auto;
+    font-family: monospace;
+    border: 1px solid #333;
+}
+
+.log-area p {
+    margin: 5px 0;
+    font-size: 13px;
+    border-bottom: 1px solid #111;
+}
+
+.secondary-btn {
+    padding: 10px 20px;
+    background: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.secondary-btn:hover {
+    background: #555;
+}
